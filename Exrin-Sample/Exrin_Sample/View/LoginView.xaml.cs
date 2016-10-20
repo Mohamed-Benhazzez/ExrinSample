@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-
-namespace Exrin_Sample.View
+﻿namespace ExrinSample.View
 {
-    public partial class LoginView : ContentPage
+    using Base;
+
+    public partial class LoginView : BaseView
     {
         public LoginView()
         {

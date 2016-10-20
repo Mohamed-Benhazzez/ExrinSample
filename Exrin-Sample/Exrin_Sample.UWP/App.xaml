@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="Exrin_Sample.UWP.App"
+    x:Class="ExrinSample.UWP.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Exrin_Sample.UWP"
+    xmlns:local="using:ExrinSample.UWP"
     RequestedTheme="Light">
 
 </Application>

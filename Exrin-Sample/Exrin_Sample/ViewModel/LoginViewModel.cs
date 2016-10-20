@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exrin_Sample.ViewModel
+﻿namespace ExrinSample.ViewModel
 {
+    using Abstraction.Model;
+    using Base;
+    using Exrin.Abstraction;
+    using Exrin.Framework;
+
     public class LoginViewModel : BaseViewModel
     {
         private readonly IAuthModel _model;
         public LoginViewModel(IAuthModel model, IExrinContainer exrinContainer) :
-           base(model, exrinContainer, new LoginVisualState(model))
+           base(exrinContainer, new LoginVisualState(model))
         {
             _model = model;
         }
@@ -21,7 +20,7 @@ namespace Exrin_Sample.ViewModel
             {
                 return GetCommand(() =>
                 {
-                    return Execution.ViewModelExecute(new LoginOperation(AuthModel, (LoginVisualState)VisualState, _resourceContainer));
+                    return Execution.ViewModelExecute(new LoginOperation(_model));
                 });
             }
         }

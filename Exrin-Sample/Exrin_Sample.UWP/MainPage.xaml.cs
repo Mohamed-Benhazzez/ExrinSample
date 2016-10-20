@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Exrin_Sample.UWP
+namespace ExrinSample.UWP
 {
     public sealed partial class MainPage
     {
@@ -21,7 +21,7 @@ namespace Exrin_Sample.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Exrin_Sample.App());
+            LoadApplication(new ExrinSample.App());
         }
     }
 }

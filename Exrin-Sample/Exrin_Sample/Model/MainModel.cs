@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exrin_Sample.Model
+﻿namespace ExrinSample.Model
 {
-    public class MainModel: BaseModel
+    using Abstraction.Model;
+    using Base;
+    using Exrin.Abstraction;
+
+    public class MainModel : BaseModel, IMainModel
     {
+        public MainModel(IExrinContainer exrinContainer)
+            : base(exrinContainer, new MainModelState()) { }
     }
 }

@@ -1,11 +1,13 @@
-﻿
-
-namespace Exrin_Sample.Container
+﻿namespace ExrinSample.Container
 {
+    using Exrin.Abstraction;
+    using Stacks;
+
     public class AuthenticationContainer : Exrin.Framework.ViewContainer, ISingleContainer
     {
 
-        public AuthenticationViewContainer(AuthenticationStack stack): base(ViewContainers.Authentication.ToString(), stack.Proxy.NativeView)
+        public AuthenticationContainer(AuthenticationStack stack)
+            : base(Abstraction.Enums.Container.Authentication.ToString(), stack.Proxy.NativeView)
         {
             Stack = stack;
 

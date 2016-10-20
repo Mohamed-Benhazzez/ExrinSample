@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Exrin_Sample.iOS
+namespace ExrinSample.iOS
 {
     public class Application
     {

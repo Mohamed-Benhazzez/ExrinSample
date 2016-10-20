@@ -1,19 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
-
-namespace Exrin_Sample
+﻿namespace ExrinSample
 {
+    using Abstraction.Enums;
+    using Exrin.Abstraction;
+    using Exrin.Framework;
+    using Xamarin.Forms;
+
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
 
-            MainPage = new Exrin_Sample.MainPage();
+            // Intializes everything and sets the MainPage to the navigation option set.
+            Bootstrapper.GetInstance()
+                        .Init()
+                        .Get<INavigationService>()
+                        .Navigate(new StackOptions()
+                        {
+                            StackChoice = Stack.Authentication
+                        });
         }
 
         protected override void OnStart()

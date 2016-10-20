@@ -23,9 +23,9 @@
     <key>MinimumOSVersion</key>
     <string>6.0</string>
     <key>CFBundleDisplayName</key>
-    <string>Exrin_Sample</string>
+    <string>ExrinSample</string>
     <key>CFBundleIdentifier</key>
-    <string>com.yourcompany.Exrin_Sample</string>
+    <string>com.yourcompany.ExrinSample</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>CFBundleIconFiles</key>

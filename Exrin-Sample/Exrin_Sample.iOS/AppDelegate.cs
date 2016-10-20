@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Exrin_Sample.iOS
+namespace ExrinSample.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
@@ -22,6 +22,7 @@ namespace Exrin_Sample.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Exrin.Framework.App.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

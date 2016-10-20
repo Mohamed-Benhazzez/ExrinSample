@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exrin_Sample.Model
+﻿namespace ExrinSample.Model
 {
-    public class AuthModel : BaseModel
+    using Abstraction.Model;
+    using Abstraction.ModelState;
+    using Base;
+    using Exrin.Abstraction;
+    using System.Threading.Tasks;
+
+    public class AuthModel : BaseModel, IAuthModel
     {
+        public AuthModel(IExrinContainer exrinContainer) 
+            : base(exrinContainer, new AuthModelState()) {}
+
+        public Task<bool> Login()
+        {
+            return Task.FromResult(true);
+        }
     }
 }

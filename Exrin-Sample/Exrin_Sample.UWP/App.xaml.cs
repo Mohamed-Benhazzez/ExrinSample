@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Exrin_Sample.UWP
+namespace ExrinSample.UWP
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -58,6 +58,7 @@ namespace Exrin_Sample.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
+                Exrin.Framework.App.Init();
                 Xamarin.Forms.Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)

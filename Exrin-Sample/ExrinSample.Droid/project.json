@@ -1,0 +1,12 @@
+﻿{
+  "dependencies": {
+    "Exrin": "1.0.0",
+    "Xamarin.Forms": "2.3.2.127"
+  },
+  "frameworks": {
+    "MonoAndroid,Version=v6.0": {
+      "imports": "portable-net45+win8+wpa81"
+    }
+  },
+  "runtimes": {}
+}

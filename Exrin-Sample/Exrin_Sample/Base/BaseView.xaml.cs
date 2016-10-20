@@ -1,18 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-
-namespace Exrin_Sample.Base
+﻿namespace ExrinSample.Base
 {
-    public partial class BaseView : ContentPage
+    using Exrin.Abstraction;
+    using System;
+    using Xamarin.Forms;
+
+    public partial class BaseView : ContentPage, IView
     {
         public BaseView()
         {
             InitializeComponent();
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            return ((IView)this).OnBackButtonPressed();
+        }
+
+        Func<bool> IView.OnBackButtonPressed { get; set; }
     }
 }

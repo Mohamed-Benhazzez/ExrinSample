@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exrin_Sample.ViewModel
+﻿namespace ExrinSample.ViewModel
 {
-    public class AboutViewModel: BaseViewModel
+    using Abstraction.Model;
+    using Exrin.Abstraction;
+    using Base;
+
+    public class AboutViewModel : BaseViewModel
     {
+        public AboutViewModel(IMainModel model, IExrinContainer exrinContainer) 
+            : base(exrinContainer, new AboutVisualState(model))
+        {            
+        }
     }
 }

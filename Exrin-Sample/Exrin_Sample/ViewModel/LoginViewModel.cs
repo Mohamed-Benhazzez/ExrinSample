@@ -8,6 +8,7 @@
     public class LoginViewModel : BaseViewModel
     {
         private readonly IAuthModel _model;
+     
         public LoginViewModel(IAuthModel model, IExrinContainer exrinContainer) :
            base(exrinContainer, new LoginVisualState(model))
         {

@@ -10,7 +10,7 @@
     using System.Threading;
     using System.Threading.Tasks;
 
-    public class LoginOperation : IOperation
+    public class LoginOperation : ISingleOperation
     {
         private readonly IAuthModel _authModel;
 
@@ -19,11 +19,11 @@
             _authModel = authModel;
         }
 
-        public Func<IList<IResult>, object, CancellationToken, Task> Function
+        public Func<object, CancellationToken, Task<IList<IResult>>> Function
         {
             get
             {
-                return async (results, parameter, token) =>
+                return async (parameter, token) =>
                 {
                     Result result = null;
 
@@ -31,8 +31,8 @@
                         result = new Result() { ResultAction = ResultType.Navigation, Arguments = new NavigationArgs() { Key = Main.Main, StackType = Stack.Main } };
                     else
                         result = new Result() { ResultAction = ResultType.Display, Arguments = new DisplayArgs() { Message = "Login was unsuccessful" } };
-                    
-                    results.Add(result);
+
+                    return new List<IResult>() { result };
                 };
             }
         }

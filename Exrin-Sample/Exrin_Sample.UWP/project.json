@@ -1,6 +1,6 @@
 ﻿{
   "dependencies": {
-    "Exrin": "1.0.3",
+    "Exrin": "1.0.4-beta2",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Xamarin.Forms": "2.3.2.127"
   },

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exrin.Framework;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -58,7 +59,7 @@ namespace ExrinSample.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                Exrin.Framework.App.Init();
+                Exrin.Framework.App.Init(new PlatformOptions() { Platform = Xamarin.Forms.Device.OS.ToString() });
                 Xamarin.Forms.Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)

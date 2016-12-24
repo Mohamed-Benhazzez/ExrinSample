@@ -17,9 +17,9 @@
 
         // This page is about to be navigated to. Do anything before the page is pushed to the stack.
         // Will wait for this to return before the page is pushed to the stack.
-        public override Task OnPreNavigate(object args)
+        public override Task OnPreNavigate(object args, Args e)
         {
-            return base.OnPreNavigate(args);
+            return base.OnPreNavigate(args, e);
         }
 
         // When this page is displayed again because the page on top of it was popped from the stack

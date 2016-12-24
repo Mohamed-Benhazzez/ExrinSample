@@ -1,6 +1,8 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Exrin.Framework;
+using Xamarin.Forms;
 
 namespace ExrinSample.Droid
 {
@@ -11,7 +13,7 @@ namespace ExrinSample.Droid
         {
             base.OnCreate(bundle);
 
-            Exrin.Framework.App.Init();
+            Exrin.Framework.App.Init(new PlatformOptions() { Platform = Device.OS.ToString() });
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }

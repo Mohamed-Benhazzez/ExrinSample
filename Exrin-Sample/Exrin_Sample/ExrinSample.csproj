@@ -15,8 +15,6 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -126,7 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Exrin_Sample.Abstraction\ExrinSample.Abstraction.csproj">
-      <Project>{CD9B473E-04B8-44D4-8E53-06556CD3D7FD}</Project>
+      <Project>{cd9b473e-04b8-44d4-8e53-06556cd3d7fd}</Project>
       <Name>ExrinSample.Abstraction</Name>
     </ProjectReference>
   </ItemGroup>

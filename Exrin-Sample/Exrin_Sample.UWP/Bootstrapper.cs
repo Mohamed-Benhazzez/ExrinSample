@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Xamarin.Forms;
-
-namespace ExrinSample
+namespace ExrinSample.UWP
 {
-    public partial class Page1 : ContentPage
+    public class Bootstrapper : IPlatformBootstrapper
     {
-        public Page1()
+        public void Register(IInjectionProxy injection)
         {
-            InitializeComponent();
         }
     }
 }

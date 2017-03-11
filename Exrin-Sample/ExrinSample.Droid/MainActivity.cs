@@ -12,9 +12,10 @@ namespace ExrinSample.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
-            Exrin.Framework.App.Init(new PlatformOptions() { Platform = Device.OS.ToString() });
+            
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            Exrin.Framework.App.Init(new PlatformOptions() { Platform = Xamarin.Forms.Device.RuntimePlatform });
+
             LoadApplication(new App());
         }
     }

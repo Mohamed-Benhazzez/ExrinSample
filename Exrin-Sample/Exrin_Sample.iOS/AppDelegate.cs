@@ -20,8 +20,8 @@ namespace ExrinSample.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Exrin.Framework.App.Init(new PlatformOptions() { Platform = Device.OS.ToString() });
             global::Xamarin.Forms.Forms.Init();
+            Exrin.Framework.App.Init(new PlatformOptions() { Platform = Xamarin.Forms.Device.RuntimePlatform });
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

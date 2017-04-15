@@ -29,10 +29,11 @@
 
                     if (await _authModel.Login())
                         result = new Result() { ResultAction = ResultType.Navigation, Arguments = new NavigationArgs() { Key = Main.Main, StackType = Stack.Main } };
+                    // Or - result = new NavigationResult(Stack.Main, Main.Main);
                     else
                         result = new Result() { ResultAction = ResultType.Display, Arguments = new DisplayArgs() { Message = "Login was unsuccessful" } };
-
-                    return new List<IResult>() { result };
+                    List<IResult> list = result;
+                    return list;
                 };
             }
         }

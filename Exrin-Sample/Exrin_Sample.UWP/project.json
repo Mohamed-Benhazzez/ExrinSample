@@ -1,8 +1,8 @@
 ﻿{
   "dependencies": {
-    "Exrin": "1.1.1",
+    "Exrin": "1.2.2",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "Xamarin.Forms": "2.3.4.212-pre4"
+    "Xamarin.Forms": "2.3.4.231"
   },
   "frameworks": {
     "uap10.0": {}

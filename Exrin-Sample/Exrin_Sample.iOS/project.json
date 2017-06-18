@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
-    "Exrin": "1.2.2",
-    "Xamarin.Forms": "2.3.4.231"
+    "Exrin": "1.3.0",
+    "Xamarin.Forms": "2.3.4.247"
   },
   "frameworks": {
     "Xamarin.iOS,Version=v1.0": {
